@@ -22,18 +22,22 @@ O frontend foi construído com Vite + React e utiliza Styled Components para est
 
 ### Passo a passo
 1. **Acesse a pasta do frontend:**
+
    ```bash
    cd Frontend
    ```
-2. **Instale as dependências:**
+3. **Instale as dependências:**
+
    ```bash
    npm install
    ```
-3. **Configure as variáveis de ambiente:** Crie um arquivo .env na raiz da pasta /Frontend:
+4. **Configure as variáveis de ambiente:** Crie um arquivo .env na raiz da pasta /Frontend:
+
    ```
-   VITE_API_URL=http://localhost:8000
+   VITE_API_URL=http://localhost:8000/analyze
    ```
-4. **Inicie o servidor de desenvolvimento:**
+5. **Inicie o servidor de desenvolvimento:**
+
    ```bash
    npm run dev
    ```
@@ -51,14 +55,17 @@ O backend é uma API robusta em Python que utiliza Docker para garantir consist�
 
 ### Passo a passo (Via Docker)
 1. Acesse a pasta do backend:
+
    ```bash
    cd Backend
    ```
 2. **Configure a variável de ambiente:** Crie um arquivo .env na raiz da pasta /Backend:
+
    ```
    GROQ_API_KEY=sua_chave_aqui
    ```
 3. Suba o container:
+  
   ```bash
   docker build -t email-classifier-back .
   docker run -p 8000:8000 --env-file .env email-classifier-back
@@ -67,6 +74,7 @@ O backend é uma API robusta em Python que utiliza Docker para garantir consist�
 1. Instale as dependências: pip install -r requirements.txt
 2. Certifique-se de que o .env está configurado.
 3. Inicie com Uvicorn:
+
    ```bash
    uvicorn main:app --reload
    ```
@@ -78,6 +86,7 @@ A documentação Swagger estará disponível em http://localhost:8000/docs.
 - **Frontend:** React, TypeScript, Redux Toolkit, Styled Components, Axios.
 - **Backend:** FastAPI, Pydantic, PyPDF2, LangChain, Docker.
 - **IA:** Groq Cloud (Llama-3-8b/70b).
+
 
 
 
